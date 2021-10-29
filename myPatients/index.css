@@ -1,0 +1,318 @@
+.patients__wrapper {
+  display: grid;
+  grid-template-areas: "patients scroll";
+  grid-template-columns: 1fr 28px;
+}
+
+.patients__scroll {
+  padding-top: 32px;
+  grid-area: scroll;
+}
+
+.patients__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 32px 12px 0 48px;
+}
+
+.patients__block {
+  width: 406px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.24);
+  border-radius: 12px;
+  flex: 1 1 auto;
+  margin: 0 19px 25px 0;
+}
+
+.patients__info {
+  display: grid;
+  grid-template-areas:
+    "avatar name name"
+    "avatar indicator appointment";
+  grid-template-columns: 64px 15px 1fr;
+  grid-template-rows: 30px 17px;
+  padding: 24px 32px;
+  border-bottom: 1px solid rgba(220, 224, 236, 0.5);
+}
+
+.info__avatar {
+  grid-area: avatar;
+  margin-right: 0;
+  align-items: flex-end;
+}
+.info__username {
+  grid-area: name;
+  font-weight: 600;
+  font-size: 17px;
+  color: #202225;
+  padding-top: 2px;
+  letter-spacing: 0.1px;
+}
+.info__status-indicator {
+  grid-area: indicator;
+  padding-top: 5px;
+}
+.info__status-appointment {
+  grid-area: appointment;
+  font-weight: 500;
+  font-size: 13px;
+  letter-spacing: 0.1px;
+  color: #a1abc9;
+}
+
+.patients__description-appointment {
+  display: grid;
+  grid-template-areas:
+    "clock date"
+    "blank description";
+  grid-template-columns: 41px 1fr;
+  grid-template-rows: 25px 73px;
+  grid-gap: 15px 0;
+  padding: 24px 32px 30px 32px;
+}
+.description-appointment__image-clock {
+  grid-area: clock;
+}
+.description-appointment__date {
+  grid-area: date;
+  font-weight: 600;
+  font-size: 15px;
+  color: #202225;
+  letter-spacing: 0.3px;
+}
+.description-appointment__image-blank {
+  grid-area: blank;
+}
+.description-appointment__text {
+  grid-area: description;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 21px;
+  color: #202225;
+}
+
+/*  add only for layout */
+.patients__description-appointment_part {
+  grid-template-rows: 0 0;
+  padding: 8px 0 0 0;
+}
+.patients__block_part {
+  border-radius: 12px 12px 0 0;
+}
+/*  */
+
+@media (min-width: 0) and (max-width: 599px) {
+  .patients__wrapper {
+    display: block;
+  }
+
+  .patients__list {
+    margin: 19px 12px 0 25px;
+  }
+
+  .patients__block {
+    width: 272px;
+    margin: 0 11px 25px 0;
+  }
+
+  .patients__info {
+    grid-template-columns: 68px 15px 1fr;
+    grid-template-rows: 30px 28px;
+    padding: 19px;
+  }
+
+  .info__avatar {
+    margin-right: 0;
+    padding: 5px 0px 0px 4px;
+  }
+  .info__username {
+    padding-top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .info__status-indicator {
+    padding-top: 3px;
+  }
+  .info__status-appointment {
+    line-height: 16px;
+  }
+
+  .patients__description-appointment {
+    grid-template-columns: 41px 1fr;
+    grid-template-rows: 48px 1fr;
+    padding: 16px 24px 24px 15px;
+  }
+
+  .description-appointment__date {
+    line-height: 20px;
+  }
+
+  .patients__block_hide-1,
+  .patients__block_hide-2,
+  .patients__block_hide-3,
+  .patients__block_hide-4,
+  .patients__block_hide-5,
+  .patients__block_hide-6,
+  .patients__block_hide-7,
+  .patients__block_hide-8,
+  .patients__block_hide-9,
+  .patients__block_hide-10,
+  .patients__block_hide-11 {
+    position: absolute;
+    left: -9999999px;
+  }
+
+  .patients__scroll {
+    position: absolute;
+    left: -9999999px;
+  }
+}
+
+/* add only for layout*/
+@media (min-width: 600px) and (max-width: 639px) {
+  .patients__wrapper {
+    grid-template-rows: 79%;
+  }
+
+  .patients__list {
+    margin: 32px 0 0 48px;
+  }
+
+  .patients__block {
+    width: 400px;
+    margin: 0 7px 25px 0;
+  }
+
+  .patients__block_hide-2,
+  .patients__block_hide-3,
+  .patients__block_hide-4,
+  .patients__block_hide-5,
+  .patients__block_hide-6,
+  .patients__block_hide-7,
+  .patients__block_hide-8,
+  .patients__block_hide-9,
+  .patients__block_hide-10,
+  .patients__block_hide-11 {
+    position: absolute;
+    left: -9999999px;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1035px) {
+  .patients__wrapper {
+    grid-template-rows: 79%;
+  }
+
+  .patients__list {
+    margin: 42px 20px 0 48px;
+  }
+
+  .patients__block {
+    margin: 0 0 25px 0;
+  }
+
+  .patients__scroll {
+    padding-top: 41px;
+  }
+
+  .patients__scroll img {
+    height: 119%;
+  }
+
+  .patients__description-appointment {
+    grid-template-rows: 25px 47px;
+  }
+
+  .patients__block_hide-2,
+  .patients__block_hide-3,
+  .patients__block_hide-4,
+  .patients__block_hide-5,
+  .patients__block_hide-6,
+  .patients__block_hide-7,
+  .patients__block_hide-8,
+  .patients__block_hide-9,
+  .patients__block_hide-10,
+  .patients__block_hide-11 {
+    position: absolute;
+    left: -9999999px;
+  }
+}
+
+@media (min-width: 1036px) and (max-width: 1065px) {
+  .patients__wrapper {
+    grid-template-rows: 79%;
+  }
+
+  .patients__list {
+    margin: 42px 20px 0 48px;
+  }
+
+  .patients__block {
+    margin: 0 15px 25px 0;
+  }
+
+  .patients__scroll {
+    padding-top: 41px;
+  }
+
+  .patients__scroll img {
+    height: 119%;
+  }
+
+  .patients__description-appointment {
+    grid-template-rows: 25px 47px;
+  }
+
+  .patients__block_hide-2,
+  .patients__block_hide-3,
+  .patients__block_hide-4,
+  .patients__block_hide-5,
+  .patients__block_hide-6,
+  .patients__block_hide-7,
+  .patients__block_hide-8,
+  .patients__block_hide-9,
+  .patients__block_hide-10,
+  .patients__block_hide-11 {
+    position: absolute;
+    left: -9999999px;
+  }
+}
+
+@media (min-width: 1066px) and (max-width: 1490px) {
+  .patients__block_hide-4,
+  .patients__block_hide-5,
+  .patients__block_hide-6,
+  .patients__block_hide-7,
+  .patients__block_hide-8,
+  .patients__block_hide-9,
+  .patients__block_hide-10,
+  .patients__block_hide-11 {
+    position: absolute;
+    left: -9999999px;
+  }
+}
+
+@media (min-width: 1491px) and (max-width: 1915px) {
+  .patients__block_hide-6,
+  .patients__block_hide-7,
+  .patients__block_hide-8,
+  .patients__block_hide-9,
+  .patients__block_hide-10,
+  .patients__block_hide-11 {
+    position: absolute;
+    left: -9999999px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .patients__block_hide-8,
+  .patients__block_hide-9,
+  .patients__block_hide-10,
+  .patients__block_hide-11 {
+    position: absolute;
+    left: -9999999px;
+  }
+}
+
+/*  */

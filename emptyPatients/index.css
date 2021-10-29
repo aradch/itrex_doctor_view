@@ -1,0 +1,29 @@
+.patients__list {
+  padding: calc(8% + 113px) 0 15% 0;
+}
+
+.patients__empty_image {
+  display: block;
+  margin: 0 auto;
+}
+
+.patients__empty_text {
+  width: 461px;
+  margin: 0 auto;
+  margin-top: 40px;
+  text-align: center;
+  font-size: 15px;
+  color: #a1abc9;
+  line-height: 21px;
+}
+
+@media (min-width: 0) and (max-width: 599px) {
+  .patients__list {
+    padding: 23.5% 0 0 0;
+  }
+
+  .patients__empty_text {
+    width: 240px;
+    margin-top: 31px;
+  }
+}

@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Poppins";
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  background: #e4ebff;
+}
+
+section {
+  height: 87.5vh;
+  background-color: #f9faff;
+  box-shadow: 0px 4px 32px rgba(218, 228, 255, 0.32);
+  border-radius: 16px;
+  margin: 0 64px;
+}
+
+.header-block {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.header-block__logo {
+  margin: 24px 0 24px 64px;
+}
+
+.header-block__login-account {
+  display: grid;
+  grid-template-areas:
+    "name avatar"
+    "profession avatar";
+  grid-template-rows: 23px 21px;
+  margin-right: 64px;
+  text-align: right;
+  align-content: center;
+}
+
+.login-account__username {
+  grid-area: name;
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.2px;
+  color: #202225;
+}
+
+.login-account__profession {
+  grid-area: profession;
+  font-size: 13px;
+  font-weight: 500;
+  color: #a1abc9;
+}
+
+.login-account__avatar {
+  grid-area: avatar;
+  margin-left: 16px;
+  margin-top: 2px;
+}
+
+.login-account__status-indicator {
+  position: absolute;
+  right: 61px;
+  top: 17px;
+}
+
+.menu__block {
+  display: flex;
+  padding: 40px 0 0 48px;
+}
+
+.menu__item {
+  width: 160px;
+  height: 40px;
+  margin-right: 12px;
+  list-style-type: none;
+  text-align: center;
+  padding: 8px 0;
+  font-size: 15px;
+}
+
+.menu__item a {
+  text-decoration: none;
+}
+
+.menu__item_active {
+  background-color: #7297ff;
+  border-radius: 8px;
+}
+.menu__item_active a {
+  color: #ffffff;
+  letter-spacing: 0.3px;
+  font-weight: 600;
+}
+
+.menu__item_inactive {
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+.menu__item_inactive a {
+  color: #7297ff;
+}
+
+.patients__header {
+  margin: 54px 0 0 48px;
+  font-weight: 600;
+  font-size: 24px;
+  letter-spacing: 0.4px;
+  color: #202225;
+}
+
+@media (min-width: 0) and (max-width: 599px) {
+  section {
+    height: calc(100vh - 72px);
+    margin: 0;
+    border-radius: 16px 16px 0px 0px;
+  }
+
+  .header-block {
+    height: 10%;
+  }
+
+  .header-block__logo {
+    margin: 20px 0 20px 24px;
+  }
+
+  .header-block__login-account {
+    margin-right: 24px;
+  }
+
+  .login-account__username,
+  .login-account__profession {
+    position: absolute;
+    left: -9999999px;
+  }
+
+  .login-account__status-indicator {
+    right: 21px;
+    top: 13px;
+  }
+
+  .menu__block {
+    padding: 12.5% 0 0 7.4%;
+  }
+
+  .menu__item {
+    width: 120px;
+    margin-right: 24px;
+  }
+
+  .patients__header {
+    margin: 13.4% 0 0 7.4%;
+    font-size: 20px;
+    line-height: 130%;
+  }
+}
